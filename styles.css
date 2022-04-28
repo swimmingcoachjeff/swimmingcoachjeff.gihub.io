@@ -1,14 +1,11 @@
-/*
-font-family: 'Amatic SC', cursive;
-font-family: 'Montserrat', sans-serif;
-*/
 body{
     background-color: aquamarine;
     min-height: 100vh;
     display: table;
-    min-width: 100%;
 }
-
+main{
+    overflow: hidden;
+}
 h2, h3{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
@@ -18,14 +15,18 @@ h2, h3{
 
 
 /*NAVBAR*/
+#top-navbar{
+    max-width: 100%;
+}
 .swimming{
     font-family: 'Amatic SC', cursive;
-    font-size: 3rem;
+    font-size: xx-large;
+    letter-spacing: 0.3rem;
 }
 
 .coach{
     font-family: 'Montserrat', sans-serif;
-    font-size: 3rem;
+    font-size: xx-large;
     font-weight: 100;
 }
 
@@ -39,9 +40,10 @@ h2, h3{
 }
 
 /* Carousel */
-#carousel{
+#carouselExampleCaptions{
     background-color: cornflowerrgb(138, 211, 233, 0.6);
-    height: auto;
+    max-width: 100% !important; 
+    margin:0;
 }
 
 .carousel-item{
@@ -58,6 +60,8 @@ h2, h3{
 #presentation{
     background-color: rgb(235, 244, 253);
     font-family: 'Montserrat', sans-serif;
+    max-width: 100%;
+    margin:0;
 }
 
 .about-img{
@@ -66,12 +70,15 @@ h2, h3{
     image-rendering:optimizeQuality;
 }
 
-
 .about-bloc p{
     text-align: justify;
     margin: 2rem 2rem;
 }
 
+#presentation .row{
+    margin:0;
+    padding:0;
+}
 
 
 /* FEATURES */
@@ -80,6 +87,9 @@ h2, h3{
     background-color: rgb(138, 211, 233);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    margin:0;
+    padding:0;
+    max-width: 100%;
 }
 
 #features h4{
@@ -96,7 +106,14 @@ h2, h3{
 #contact{
     background-color: rgb(235, 244, 253);
     font-family: 'Montserrat', sans-serif;
-    padding: 1rem 1rem;
+    margin:0;
+    padding:0 1rem;
+    max-width: 100%
+}
+
+#contact-links{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
 
 #contact a{
@@ -104,39 +121,10 @@ h2, h3{
     text-decoration:none;
 }
 
-
-
-.btn{
-    color: rgb(23, 44, 90);
-    border-color: rgb(23, 44, 90);
-}
-
-.btn:hover{
-    background-color: rgb(23, 44, 90);
-    border-color: rgb(23, 44, 90);
-}
-.form-control:focus {
-    border-color: rgb(138, 211, 233, 0.6);
-    box-shadow: 0 0 0 0.2rem rgb(138, 211, 233, 0.4);
-}
-.btn:visited{
-    background-color: rgb(23, 44, 90) ! important;
-    border-color: rgb(23, 44, 90);
-}
-.btn:focus{
-    border-color: rgb(23, 44, 90);
-    box-shadow: 0 0 0 0.2rem rgb(138, 211, 233, 0.6);
-}
-
-.btn:not(:disabled):not(:disabled):active{
-    background-color: rgb(23, 44, 90) ! important;
-    border-color: rgb(23, 44, 90);
-    box-shadow: 0 0 0 0.2rem rgb(138, 211, 233, 0.6);
-} 
-
 /* FOOTER */
 .footer-navbar{
     height: 2.5rem;
+    max-width: 100%
 }
 
 .img-footer{
@@ -149,7 +137,63 @@ h2, h3{
 }
 .footer-navbar i{
     color: rgb(23, 44, 90);
+    padding-bottom: 0.5rem;
 }
 body > footer {
     display: table-row;
+}
+
+/* SIZE RESPONSIVNESS ON MOBILE */
+
+/*This is for laptop*/
+@media (max-width: 400px) {
+    h1{
+        font-size: medium;
+    }
+    h2, h3{
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+    .swimming{
+        font-family: 'Amatic SC', cursive;
+        font-size: large;
+    }
+    .coach{
+        font-family: 'Montserrat', sans-serif;
+        font-size: large;
+        font-weight: 100;
+        padding-right:0;
+        margin-right:0;
+    }
+    .carousel-item h4{
+        font-size: small;
+    }
+    .carousel-item p{
+        font-size: x-small;
+    }
+
+}
+
+@media (max-width: 500px) {
+    h1{
+        font-size: large;
+    }
+    h2, h3{
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+    .carousel-item h4{
+        font-size: medium;
+    }
+    .carousel-item p{
+        font-size: small;
+    }
+   
+    #contact a, #contact h4{
+        font-size: small;
+    }
+
+    .footer-navbar p{
+        font-size: small;
+    }
 }
