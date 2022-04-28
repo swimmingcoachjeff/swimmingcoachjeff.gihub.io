@@ -148,7 +148,7 @@ body > footer {
 /*This is for laptop*/
 @media (max-width: 400px) {
     h1{
-        font-size: medium;
+        font-size: large;
     }
     h2, h3{
         padding-top: 0.75rem;
@@ -156,11 +156,11 @@ body > footer {
     }
     .swimming{
         font-family: 'Amatic SC', cursive;
-        font-size: large;
+        font-size: 1.75rem;
     }
     .coach{
         font-family: 'Montserrat', sans-serif;
-        font-size: large;
+        font-size: 1.75rem;
         font-weight: 100;
         padding-right:0;
         margin-right:0;
@@ -175,18 +175,15 @@ body > footer {
 }
 
 @media (max-width: 500px) {
-    h1{
-        font-size: large;
-    }
+
     h2, h3{
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
     }
-    .carousel-item h4{
-        font-size: medium;
-    }
-    .carousel-item p{
-        font-size: small;
+
+    .about-bloc p{
+        text-align: justify;
+        margin: 0.75rem 0.75rem;
     }
    
     #contact a, #contact h4{
