@@ -134,17 +134,22 @@ h2, h3{
 }
 .footer-navbar a{
     color: rgb(23, 44, 90);
+    text-decoration:none;
 }
 .footer-navbar i{
     color: rgb(23, 44, 90);
     padding-bottom: 0.5rem;
+    
 }
 body > footer {
     display: table-row;
 }
 
 .footer-navbar p{
-    color: rgb(53, 228, 169);
+    color:darkgrey;
+}
+.footer-navbar p a{
+    color:cornflowerblue;
 }
 
 /* SIZE RESPONSIVNESS ON MOBILE */
