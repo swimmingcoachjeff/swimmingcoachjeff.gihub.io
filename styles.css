@@ -143,6 +143,10 @@ body > footer {
     display: table-row;
 }
 
+.footer-navbar p{
+    color: rgb(53, 228, 169);
+}
+
 /* SIZE RESPONSIVNESS ON MOBILE */
 
 /*This is for laptop*/
