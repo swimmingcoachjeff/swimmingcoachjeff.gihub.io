@@ -1,20 +1,22 @@
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------- ALL PAGES -------------------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
 body{
-    background-color: aquamarine;
+    background-color: rgb(138, 211, 233);
     min-height: 100vh;
     display: table;
 }
 main{
     overflow: hidden;
 }
-h2, h3{
+h1, h2, h3, h4{
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
 }
 
-
-/*NAVBAR*/
+/* --------------------------------------- NAVBAR -------------------------------------- */
 #top-navbar{
     max-width: 100%;
 }
@@ -29,15 +31,73 @@ h2, h3{
     font-size: xx-large;
     font-weight: 100;
 }
+/* --------------------------------------- NAVBAR ENDS -------------------------------------- */
 
-.navbar-toggler{
-    margin-right: 0;
+/* --------------------------------------- customised bootstrap buttons ------------------------------------*/
+.btn{
+    color: rgb(138, 211, 233);
+    border-color: rgb(138, 211, 233);
 }
 
-#BODY1{
-    background-color:cadetrgb(138, 211, 233, 0.6);
-    text-align: center;
+.btn:hover{
+    background-color: rgb(138, 211, 233);
+    border-color: rgb(138, 211, 233);
 }
+.form-control:focus {
+    border-color: rgb(164, 226, 245);
+    box-shadow: 0 0 0 0.2rem rgb(164, 226, 245);
+}
+.btn:visited{
+    background-color: rgb(138, 211, 233) ! important;
+    border-color: rgb(138, 211, 233);
+}
+.btn:focus{
+    border-color: rgb(138, 211, 233);
+    box-shadow: 0 0 0 0.2rem rgb(164, 226, 245);
+}
+
+.btn:not(:disabled):not(:disabled):active{
+    background-color: rgb(138, 211, 233) ! important;
+    border-color: rgb(138, 211, 233);
+    box-shadow: 0 0 0 0.2rem rgb(164, 226, 245);
+} 
+/* ------------------------------------ customised bootstrap buttons ends ------------------------------------*/
+
+/* ------------------------------------ FOOTER ------------------------------------ */
+.footer-navbar{
+    height: 2.5rem;
+    max-width: 100%
+}
+
+.img-footer{
+    height: 3rem;
+    width: 3rem;
+    font-size: 1rem;
+}
+.footer-navbar a{
+    color: rgb(23, 44, 90);
+    text-decoration:none;
+}
+.footer-navbar i{
+    color: rgb(23, 44, 90);
+    padding-bottom: 0.5rem;
+    
+}
+body > footer {
+    display: table-row;
+}
+
+.footer-navbar p{
+    color:darkgrey;
+}
+.footer-navbar p a{
+    color:cornflowerblue;
+}
+/* ------------------------------------ FOOTER ------------------------------------ */
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------------------------- INDEX PAGE ---------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
 
 /* Carousel */
 #carouselExampleCaptions{
@@ -87,72 +147,188 @@ h2, h3{
     background-color: rgb(138, 211, 233);
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    max-width: 100%;
+    margin:0;
+    padding-bottom: 2rem;
+}
+
+#features .row{
     margin:0;
     padding:0;
-    max-width: 100%;
 }
 
 #features h4{
     margin-top: 1.5rem;
     margin-bottom:1.5rem;
 }
-#features img{
-    max-height:50%;
-    max-width:50%;
+
+.services-item{
+    background-color: rgb(70, 185, 185);
+    /* background-color: rgb(235, 244, 253); */
+    font-family: 'Montserrat', sans-serif;
 }
 
-/* CONTACT*/
+.services-item p{
+    display: block;
+    margin: auto;
+    padding: 0.5rem;
+    text-align: justify;
+    width: 70%;
+}
 
+.services-item:hover p{
+    background-color: rgb(95, 158, 160, 0.9);
+}
+
+.services-item:hover .btn{
+    color: aliceblue;
+    background-color: rgb(95, 158, 160, 0.9);
+    border-color: rgb(95, 158, 160, 0.9);
+}
+
+.services-item:hover .btn:hover{
+    background-color: rgb(138, 211, 233);
+    border-color: rgb(138, 211, 233);
+    
+}
+
+#competition-service:hover{
+    background-image: url("images/Carousel/susan-flynn-ImEH3k-GQxg-unsplash - 16-9.jpg"); 
+    background-position: center; /* This is for the background-image postion inside the div*/
+    background-size: cover; /* This is for the background-image postion inside the div*/
+    color: aliceblue;
+}
+#natation-service:hover{
+    background-image: url("images/Carousel/enis-yavuz-JhcQHSBMask-unsplash - 16-9.jpg"); 
+    background-position: center; /* This is for the background-image postion inside the div*/
+    background-size: cover; /* This is for the background-image postion inside the div*/
+    color: aliceblue;
+}
+#aquagym-service:hover{
+    background-image: url("images/Carousel/g_header1_1 - 16-9.png"); 
+    background-position: center; /* This is for the background-image postion inside the div*/
+    background-size: cover; /* This is for the background-image postion inside the div*/
+    color: aliceblue;
+}
+#surveillance-service:hover{
+    background-image: url("images/jubeo-hernandez-ZmWLGkPe1Sg-unsplash.jpg"); 
+    background-position: center; /* This is for the background-image postion inside the div*/
+    background-size: cover; /* This is for the background-image postion inside the div*/
+    color: aliceblue;
+}
+
+/*--------------------- Contact -----------------------*/
 #contact{
     background-color: rgb(235, 244, 253);
     font-family: 'Montserrat', sans-serif;
     margin:0;
     padding:0 1rem;
-    max-width: 100%
+    max-width: 100%;
+    padding-bottom:1rem;
 }
 
-#contact-links{
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+.contact-form {
+	display: block;
+	width: 100%;	
 }
 
-#contact a{
-    color: rgb(33, 37, 41);
-    text-decoration:none;
+.contact-form input {
+	background-color: transparent;
+	padding-left: 25px;
+	height: 60px;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid rgb(138, 211, 233);
+	margin-bottom: 30px;
+	font-size: 13px;
 }
 
-/* FOOTER */
-.footer-navbar{
-    height: 2.5rem;
-    max-width: 100%
+.contact-form textarea {
+	padding-left: 25px;
+	height: 200px;
+	width: 100%;
+	border: none;
+	border-bottom: 2px solid rgb(138, 211, 233);
+	margin-bottom: 30px;
+	font-size: 13px;
+	background-color: transparent;
 }
 
-.img-footer{
-    height: 3rem;
-    width: 3rem;
-    font-size: 1rem;
-}
-.footer-navbar a{
-    color: rgb(23, 44, 90);
-    text-decoration:none;
-}
-.footer-navbar i{
-    color: rgb(23, 44, 90);
-    padding-bottom: 0.5rem;
-    
-}
-body > footer {
-    display: table-row;
+/* autofill modifications */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 2px solid rgb(138, 211, 233);
+  -webkit-text-fill-color: #808181;
+  -webkit-box-shadow: 0 0 0px 1px rgb(64, 153, 180) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
-.footer-navbar p{
-    color:darkgrey;
+input, select, textarea{
+    color:#808181 !important;
 }
-.footer-navbar p a{
-    color:cornflowerblue;
+.form-control:focus { 
+    color:#808181;
+    background-color: transparent;
+    border-color: rgb(76, 179, 211); 
+    box-shadow: 0 0 0 0.2rem rgb(164, 226, 245);
 }
 
-/* SIZE RESPONSIVNESS ON MOBILE */
+.form-control:after{
+    -webkit-text-fill-color: #808181;
+}
+
+.social-section{
+	background-color: white;
+}
+
+#hidden_iframe{
+    display:none;
+}
+
+.after-send{
+    display: inline-block;
+    color: rgb(76, 179, 211);
+    font-size: medium;
+}
+/*--------------------------------Contact ends -------------------------------------------*/
+
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------- COMPETITION ------------------------------------------------------ */
+/* -------------------------------------------------------------------------------------------------------------- */
+
+.img-competition{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content ul{
+    max-width: 70%;
+    list-style-image: url('images/blue-check-mark.png');
+}
+
+.content li{
+    padding: 1rem 0;
+}
+
+/* -------------------------------------------------------------------------------------------------------------- */
+/* ---------------------------------- SIZE RESPONSIVNESS ON MOBILE ---------------------------------------------- */
+/* -------------------------------------------------------------------------------------------------------------- */
 
 /*This is for laptop*/
 @media (max-width: 400px) {
@@ -163,6 +339,7 @@ body > footer {
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
     }
+    /* --------------- NAVBAR --------------- */
     .swimming{
         font-family: 'Amatic SC', cursive;
         font-size: 1.75rem;
@@ -174,6 +351,7 @@ body > footer {
         padding-right:0;
         margin-right:0;
     }
+    /* --------------- INDEX --------------- */
     .carousel-item h4{
         font-size: small;
     }
@@ -189,7 +367,7 @@ body > footer {
         padding-top: 0.75rem;
         padding-bottom: 0.75rem;
     }
-
+    /* --------------- INDEX --------------- */
     .about-bloc p{
         text-align: justify;
         margin: 0.75rem 0.75rem;
@@ -198,7 +376,7 @@ body > footer {
     #contact a, #contact h4{
         font-size: small;
     }
-
+    /* --------------- FOOTER --------------- */
     .footer-navbar p{
         font-size: small;
     }
