@@ -328,7 +328,7 @@ input, select, textarea{
 
 li span {
     display: inline-block;
-    vertical-align: text-bottom;
+    vertical-align: middle;
   }
 
 /* -------------------------------------------------------------------------------------------------------------- */
