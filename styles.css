@@ -62,6 +62,14 @@ h1, h2, h3, h4{
     box-shadow: 0 0 0 0.2rem rgb(164, 226, 245);
 } 
 /* ------------------------------------ customised bootstrap buttons ends ------------------------------------*/
+#btnScrollToTop{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
 
 /* ------------------------------------ FOOTER ------------------------------------ */
 .footer-navbar{
