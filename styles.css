@@ -240,13 +240,13 @@ body > footer {
 	width: 100%;	
 }
 
-.contact-form input {
-	background-color: transparent;
+.contact-form input, select {
+	background-color: transparent !important;
 	padding-left: 25px;
 	height: 60px;
 	width: 100%;
-	border: none;
-	border-bottom: 2px solid rgb(138, 211, 233);
+	border: none !important;
+	border-bottom: 2px solid rgb(138, 211, 233) !important;
 	margin-bottom: 30px;
 	font-size: 13px;
 }
@@ -260,6 +260,10 @@ body > footer {
 	margin-bottom: 30px;
 	font-size: 13px;
 	background-color: transparent;
+}
+
+.competition-contact-textarea{
+    height: 100px !important;
 }
 
 /* autofill modifications */

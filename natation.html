@@ -29,6 +29,9 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
     <!-- Lien font awesome kit-->
     <script src="https://kit.fontawesome.com/b3ed52924d.js" crossorigin="anonymous"></script>
 
@@ -125,32 +128,32 @@
                             <h2>CONTACT</h2>
                             <h3>Commencez dès à présent votre entrainement personnalisé, contactez-moi</h3>
                         </div>
+                        
                         <form name="gform" id="gform" enctype="text/plain"
-                            action="https://docs.google.com/forms/d/e/1FAIpQLSeh2qvh74w3GphdGhuOjble3cUx4XAKo4IeVeCsvVxB1N3yvg/formResponse?"
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSfTWHHkqWD8l4-kKS45k2rqSLcdePTWxPsfUa0esukVIyibeA/formResponse?"
                             class="contact-form" onsubmit="submitted=true;" target="hidden_iframe">
                             <div class="row">
 
                                 <div class="col-md-6">
-                                    <input class="form-control" id="entry.330912213" name="entry.330912213" type="text"
-                                        placeholder="Name">
+                                    <input class="form-control" id="entry.233410192" name="entry.233410192" type="text"
+                                        placeholder="Nom">
                                 </div>
 
                                 <div class="col-md-6">
-                                    <input class="form-control" id="entry.228049524" name="entry.228049524" type="email"
+                                    <input class="form-control" id="entry.358753120" name="entry.358753120" type="email"
                                         placeholder="E-mail">
                                 </div>
 
                                 <div class="col-md-12">
-                                    <input id="entry.1591914824" name="entry.1591914824" class="form-control"
-                                        type="text" placeholder="Subject">
-                                    <textarea id="entry.1055111765" name="entry.1055111765" class="form-control"
+                                    <input id="entry.1066264560" name="entry.1066264560" class="form-control"
+                                        type="text" placeholder="Sujet">
+                                    <textarea id="entry.742390362" name="entry.742390362" class="form-control"
                                         placeholder="Message"></textarea>
                                 </div>
                             </div>
 
                             <button id="send-button" type="submit"
-                                class="btn btn-outline-secondary btn-lg mx-2 mt-2">Send
-                                message</button>
+                                class="btn btn-outline-secondary btn-lg mx-2 mt-2">Envoyer</button>
                         </form>
                         <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {}"></iframe>
                     </div>
@@ -158,14 +161,15 @@
             </div>
         </section>
         <!-- Contact section end -->
+
+
     </main>
     <!-- ---------------------------------------------------------- FOOTER ----------------------------------------------------------------- -->
     <footer class="footer-navbar navbar-light bg-light pb-5">
         <div class="container-fluid pt-2 pb-2">
             <div class="row">
                 <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <a href="#carouselExampleCaptions"><img class="img-footer" src="images/LOGO.png"
-                            alt="swimming coach jeff - leçons natation à Ajaccio Corse"></a>
+                    <a href="#carouselExampleCaptions"><img class="img-footer" src="images/LOGO_07_avec_fond.png" alt="swimming coach jeff - leçons natation à Ajaccio Corse"></a>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <p>Made with ❤ by <a href="https://github.com/JulieMarieCharmillon">Julie-Marie Charmillon</a>
@@ -197,6 +201,20 @@
             window.scrollTo(0,0);
         })
     </script>
+    <script type="text/javascript">
+		var submitted = false;
+	</script>
+    <script type="text/javascript">
+		$('#gform').on('submit', function (e) {
+			// $('#gform *').fadeOut(2000);
+			$('#send-button').after(
+				'<div class="after-send px-5 mx_5">Votre message a bien été envoyé <i class="fa fa-paper-plane-o" aria-hidden="true"></i> </div>'
+			);
+			setTimeout(function () {
+				$('#gform')[0].reset(), 2000
+			});
+		});
+	</script>
 </body>
 
 </html>

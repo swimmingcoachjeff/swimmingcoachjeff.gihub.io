@@ -31,6 +31,9 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
 
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <!-- Lien font awesome kit-->
     <script src="https://kit.fontawesome.com/b3ed52924d.js" crossorigin="anonymous"></script>
 
@@ -156,7 +159,91 @@
             </div>
         </section>
 
+        <!-- Contact section start -->
+        <section id="contact" class="contact-section spad">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xl-8 offset-xl-2">
+                        <div class="section-title">
+                            <h2>CONTACT</h2>
+                            <h3>Commencez dès à présent votre entrainement personnalisé, contactez-moi </h3>
+                        </div>
+
+                        <form name="gform" id="gform" enctype="text/plain"
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSfylIOVzU1J23Muk8x2JwanZRzoSTNtHl-RiWJL1CsHjKpTtQ/formResponse?"
+                            class="contact-form" onsubmit="submitted=true;" target="hidden_iframe">
+                            <div class="row">
+                                <!-- ------------------------------------------------------------------------ -->
+                                <div class="col-md-6">
+                                    <input class="form-control" id="entry.2085408983" name="entry.2085408983" type="text"
+                                        placeholder="Nom">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input class="form-control" id="entry.1894330915" name="entry.1894330915" type="email"
+                                        placeholder="E-mail">
+                                </div>
+                                <!-- ------------------------------------------------------------------------ -->
+                                
+                                <div class="col-md-4">
+                                    <!-- <label for="entry.720036274">Genre</label> -->
+
+                                    <select class="form-control" name="entry.720036274" id="entry.720036274" >
+                                        <option class="form-control" value="placeholder">Genre ↓</option>
+                                        <option class="form-control" value="Femme">Femme</option>
+                                        <option class="form-control" value="Homme">Homme</option>
+                                        <option class="form-control" value="Je ne souhaite pas le préciser">Je ne souhaite pas le préciser</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control" id="entry.1876627423" name="entry.1876627423" type="text"
+                                        placeholder="Age">
+                                </div>
+                                <div class="col-md-4">
+                                    <input class="form-control" id="entry.212268573" name="entry.212268573" type="text"
+                                        placeholder="Sport pratiqué">
+                                </div>
+                                <!-- ------------------------------------------------------------------------ -->
+                                <div class="col-md-6">
+                                    <!-- <label for="entry.12245568">Niveau</label> -->
+
+                                    <select class="form-control" name="entry.12245568" id="entry.12245568">
+                                        <option class="form-control" value="placeholder">Niveau ↓</option>
+                                        <option class="form-control" value="Débutant">Débutant</option>
+                                        <option class="form-control" value="Intermédiaire - Loisir">Intermédiaire - Loisir</option>
+                                        <option class="form-control" value="Intermédiaire - Compétition">Intermédiaire - Compétition</option>
+                                        <option class="form-control" value="Avancé">Avancé</option>
+                                        <option class="form-control" value="Professionnel">Professionnel</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input class="form-control" id="entry.239412120" name="entry.239412120" type="text"
+                                        placeholder="Nombre d'entrainement par semaine">
+                                </div>
+                                <!-- ------------------------------------------------------------------------ -->
+                                <div class="col-md-12">
+                                    <textarea id="entry.1883007121" name="entry.1883007121" class="form-control competition-contact-textarea"
+                                        placeholder="Résultats"></textarea>
+                                    <textarea id="entry.1870696969" name="entry.1870696969" class="form-control competition-contact-textarea"
+                                        placeholder="Objectifs"></textarea>
+                                    <textarea id="entry.1007085552" name="entry.1007085552" class="form-control competition-contact-textarea"
+                                    placeholder="Message personnel"></textarea>
+                                </div>
+                            </div>
+
+                            <button id="send-button" type="submit"
+                                class="btn btn-outline-secondary btn-lg mx-2 mt-2">Envoyer</button>
+                        </form>
+                        <iframe name="hidden_iframe" id="hidden_iframe" onload="if(submitted) {}"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section end -->
     </main>
+
+
 
     <!-- ---------------------------------------------------------- FOOTER ----------------------------------------------------------------- -->
     <footer class="footer-navbar navbar-light bg-light pb-5">
@@ -191,10 +278,24 @@
     </button>
     <script>
         const btnScrollToTop = document.querySelector("#btnScrollToTop")
-        
-        btnScrollToTop.addEventListener("click", function(){
-            window.scrollTo(0,0);
+
+        btnScrollToTop.addEventListener("click", function () {
+            window.scrollTo(0, 0);
         })
+    </script>
+    <script type="text/javascript">
+        var submitted = false;
+    </script>
+    <script type="text/javascript">
+        $('#gform').on('submit', function (e) {
+            // $('#gform *').fadeOut(2000);
+            $('#send-button').after(
+                '<div class="after-send px-5 mx_5">Votre message a bien été envoyé <i class="fa fa-paper-plane-o" aria-hidden="true"></i> </div>'
+            );
+            setTimeout(function () {
+                $('#gform')[0].reset(), 2000
+            });
+        });
     </script>
 </body>
 
