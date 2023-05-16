@@ -32,7 +32,7 @@
 
     <!-- JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        
+
     <!-- Lien font awesome kit-->
     <script src="https://kit.fontawesome.com/b3ed52924d.js" crossorigin="anonymous"></script>
 
@@ -46,6 +46,19 @@
     <link href="styles.css" rel="stylesheet">
     <link rel="icon" href="images/LOGO.png">
 </head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T4ELPSCTXE"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-T4ELPSCTXE');
+    </script>
 
 <body>
     <main>
@@ -75,7 +88,8 @@
                                 <li><a class="dropdown-item" href="competition.html">Compétition</a></li>
                                 <li><a class="dropdown-item" href="aquagym.html">Aquagym & Aquapalming</a></li>
                                 <li><a class="dropdown-item" href="surveillance.html">Surveillance d'évènement</a></li>
-                                <li><a class="dropdown-item" href="cours-et-lecon-de-natation.html">Leçons de natation</a></li>
+                                <li><a class="dropdown-item" href="cours-et-lecon-de-natation.html">Leçons de
+                                        natation</a></li>
                             </ul>
                         </li>
                         <li class="nav-item px-2">
@@ -137,7 +151,7 @@
                             <h2>CONTACT</h2>
                             <h3>Commencez dès à présent votre entrainement personnalisé, contactez-moi</h3>
                         </div>
-                        
+
                         <form name="gform" id="gform" enctype="text/plain"
                             action="https://docs.google.com/forms/d/e/1FAIpQLSfTWHHkqWD8l4-kKS45k2rqSLcdePTWxPsfUa0esukVIyibeA/formResponse?"
                             class="contact-form" onsubmit="submitted=true;" target="hidden_iframe">
@@ -178,7 +192,8 @@
         <div class="container-fluid pt-2 pb-2">
             <div class="row">
                 <div class="col-md-3 d-flex justify-content-center align-items-center">
-                    <a href="#carouselExampleCaptions"><img class="img-footer" src="images/LOGO_07_avec_fond.png" alt="swimming coach jeff - entraineur natation aquagym Ajaccio corse"></a>
+                    <a href="#carouselExampleCaptions"><img class="img-footer" src="images/LOGO_07_avec_fond.png"
+                            alt="swimming coach jeff - entraineur natation aquagym Ajaccio corse"></a>
                 </div>
                 <div class="col-md-6 d-flex justify-content-center align-items-center">
                     <p>Made with ❤ by <a href="https://github.com/JulieMarieCharmillon">Julie-Marie Charmillon</a>
@@ -205,25 +220,26 @@
     </button>
     <script>
         const btnScrollToTop = document.querySelector("#btnScrollToTop")
-        
-        btnScrollToTop.addEventListener("click", function(){
-            window.scrollTo(0,0);
+
+        btnScrollToTop.addEventListener("click", function () {
+            window.scrollTo(0, 0);
         })
     </script>
     <script type="text/javascript">
-		var submitted = false;
-	</script>
+        var submitted = false;
+    </script>
     <script type="text/javascript">
-		$('#gform').on('submit', function (e) {
-			// $('#gform *').fadeOut(2000);
-			$('#send-button').after(
-				'<div class="after-send px-5 mx_5">Votre message a bien été envoyé <i class="fa fa-paper-plane-o" aria-hidden="true"></i> </div>'
-			);
-			setTimeout(function () {
-				$('#gform')[0].reset(), 2000
-			});
-		});
-	</script>
+        $('#gform').on('submit', function (e) {
+            // $('#gform *').fadeOut(2000);
+            $('#send-button').after(
+                '<div class="after-send px-5 mx_5">Votre message a bien été envoyé <i class="fa fa-paper-plane-o" aria-hidden="true"></i> </div>'
+            );
+            setTimeout(function () {
+                $('#gform')[0].reset(), 2000
+            });
+        });
+    </script>
+    
 </body>
 
 </html>
